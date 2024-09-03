@@ -1,115 +1,15 @@
-*{
-    margin: 40;
-    padding: 40;
-    box-sizing: border-box;
-    align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+header{
+    font-size: larger;
+    font-style: italic;
+    font-optical-sizing: 10px;
+    color: rgb(23, 170, 170);
+    text-transform: capitalize;
+    text-shadow: 5cap;
+    scroll-behavior: smooth;
 }
-body{
-    background-color: rgba(18, 228, 123, 0.712);
-    background: linear-gradient(to right, #0c0c0c, #a52c2c,#252020);
-}
-.container{
-    background: #8a2424;
-    width: 100px;
-    padding: 10px;
-    margin: 60px auto;
-    border-radius: 10px;
-    box-shadow: 20px 35px rgb(95, 32, 32);
-    text-align: center;
-}
-.form{
-    margin: 0 2rem;
-}
-.form-title{
-    font-size: x-large;
-    font: bolder;
-    text-align: center;
-    padding: 1.5px;
-    margin-bottom: 0.4rem;
-}
-input{
-    color: inherit;
-    width: 100%;
-    background-color: #ccd0dd;
-    border: none; 
-    border-bottom: 1px solid #465963;
-    padding-left: 1.5rem;
-    font-size: 15px;
-    align-self: center;
-}
-.input-group{
-    padding: 1% 0;
-    position: relative;
-}
-.input-group i{
-    position: absolute;
-    color: rgb(59, 145, 77);
-}
-.input:focus{
-    background-color: transparent;
-    outline: transparent;
-    border-bottom: 2px solid hsl(hue, saturation, lightness);
-}
-.label{
-    color: rgb(118, 235, 9);
-    position: relative;
-    left: 2rem;
-    cursor: auto;
-    transition: 0.5s ease all;
-}
-.input:focus~label,input:not(:placeholder-shown)~label{
-    top: 3rem;
-    color: hsl(hue, saturation, lightness);
-    font-size: 15px;
-}
-.recovery{
-    text-align: right;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-.recovery a{
-    text-align: center;
-    text-decoration: dotted;
-    color: rgb(19, 228, 228);
-}
-.recovery a:hover{
-    color: rgb(32, 106, 202);
-    text-decoration: underline;
-    visibility: unset;
-}    
-.btn{
-    font-size: 2px;
-    padding: 8px;
-    text-align: center;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    width: 100%;
-    background: #07101d;
-    color: #0ba2e7;
-    transition: 0.9s;
-}
-.btn:hover{
-    background-color: #617680;
-}
-.or{
-    font-size: x-large;
-    margin-top: 0.5rem;
-    text-align: center;
-    color: rgb(11, 12, 12);
-}
-.link{
-    display: flex;
-    justify-content: space-around;
-    padding: 0 4rem;
-    margin-top: 0.8rem;
-    background-color: #3c0fdf;
-    font-weight: bold;
-}
-.button{
-    color: #0784be;
-    border: none;
-    background-color: transparent;
 
+body{
+    background-color: rgb(39, 36, 36);
+    text-align: center;  
+    border: 4cm;
 }

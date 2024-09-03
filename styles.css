@@ -1,0 +1,88 @@
+*{
+    background-color: rgb(230, 217, 217);
+    padding: 20px 10px;
+    width: 10px 20px;
+    align-items: center;
+    text-emphasis: 0%;
+    text-decoration: dotted;
+    
+}
+
+.body{
+    align-items: center;
+}
+
+.body{
+    text-decoration: dotted;
+    text-shadow: 10cqb;
+    text-decoration-color: blue;
+}
+body{
+    font-family: aerial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header{
+    background-color: #ff9800;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    margin: 0;
+}
+
+section{
+    margin: 20px;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0.1);
+    text-align: center;
+}
+
+#cart{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#payment{
+    text-align: center;
+    margin-top: 20px;
+}
+
+button{
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover{
+    background-color: #e68a00;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
