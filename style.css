@@ -1,15 +1,41 @@
-header{
-    font-size: larger;
-    font-style: italic;
-    font-optical-sizing: 10px;
-    color: rgb(23, 170, 170);
+body{
+    align-content: center;
+    background-color: rgb(70, 150, 184);
+    text-align: center;
     text-transform: capitalize;
-    text-shadow: 5cap;
-    scroll-behavior: smooth;
+    text-overflow: ellipsis;
+    text-overflow: clip;
+   
+    
 }
 
-body{
-    background-color: rgb(39, 36, 36);
-    text-align: center;  
-    border: 4cm;
+.hella{
+    font-size: large;
+    display: block;
+}
+
+.box {
+    width: 300px;
+    /* padding: 20px; */
+    padding-bottom: 20px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: rgb(58, 151, 194);
+}
+
+.input{
+    border-radius: 4px;
+    background-color: rgb(133, 196, 196);
+    text-decoration-skip: none;
+    font-display: inherit;
+}
+
+.out{
+    border-radius: 5px;
+}
+
+.hed{
+    background-color: rgb(29, 165, 165);
 }
