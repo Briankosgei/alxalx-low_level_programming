@@ -1,41 +1,76 @@
 body{
-    align-content: center;
-    background-color: rgb(70, 150, 184);
+    margin: 0;
+    padding: 0;
+    background-color: #cca8a8;
+    font-family: aerial, sans-serif;
+
+}
+
+header{
+    background-color: #b4a18f;
+    color: rgb(23, 51, 51);
+    padding: 20px;
     text-align: center;
-    text-transform: capitalize;
-    text-overflow: ellipsis;
-    text-overflow: clip;
-   
-    
+
+
 }
 
-.hella{
-    font-size: large;
-    display: block;
+h1{
+    margin: 0;
+
 }
 
-.box {
-    width: 300px;
-    /* padding: 20px; */
-    padding-bottom: 20px;
-    margin: auto;
-    border: 1px solid #ccc;
+.menu-h2{
+    text-align: center;
+}
+
+section{
+    margin: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.menu-item{
+    background-color: aliceblue;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 50px;
-    background-color: rgb(58, 151, 194);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-.input{
-    border-radius: 4px;
-    background-color: rgb(133, 196, 196);
-    text-decoration-skip: none;
-    font-display: inherit;
+.payment{
+    text-align: center;
+    margin-top: 20px;
+    background-color: aqua;
+    border: 1px solid black;
 }
 
-.out{
+button{
+    background-color: rgb(212, 212, 166);
+    color: rgb(3, 3, 7);
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.hed{
-    background-color: rgb(29, 165, 165);
+button:hover{
+    background-color: #e68a00;
+    text-align: center;
+}
+
+footer{
+    background-color: #333;
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 9px;
+    border: none;
 }
