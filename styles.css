@@ -1,45 +1,44 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #b49696;
-    margin: 0;
+    background-color: #f4f4f4;
     padding: 20px;
-    display: flex;
-    justify-content: center;
 }
 
 .container {
-    background-color: rgb(167, 128, 128);
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(190, 176, 176, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    width: 100%;
+    margin: 0 auto;
+    border: 1px solid burlywood;
 }
 
-h1, h2 {
+h1, h2, h3 {
     text-align: center;
 }
 
-.menu-section {
-    margin: 20px 0;
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.menu-item p {
-    margin: 0;
+.menu-item h3, .menu-item p {
+    margin: 5px 0;
 }
 
 button {
-    padding: 10px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    background-color: #7a8360;
-    color: rgb(14, 13, 13);
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -48,11 +47,29 @@ button:active {
     background-color: #0056b3;
 }
 
-.total-section {
-    text-align: center;
-    margin-top: 30px;
+#order-list {
+    background-color: #f1e8e8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 .payment-methods button {
-    margin: 5px;
+    background-color: #28a745;
+    color: white;
+}
+
+.payment-methods button:active {
+    background-color: #218838;
+}
+
+.img{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
 }

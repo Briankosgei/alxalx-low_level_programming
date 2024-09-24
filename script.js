@@ -1,18 +1,44 @@
-let total = 0;
+let totalPrice = 0;
+let orderList = [];
 
-// Function to add item to order
-function addToOrder(price) {
-    total += price;
-    document.getElementById('total').innerText = total;
+function addToOrder(item, price) {
+    // Add the item and price to the order list
+    orderList.push({ item, price });
+    
+    // Update the display of the order list
+    let orderListDiv = document.getElementById("order-list");
+    let newItem = document.createElement("p");
+    newItem.innerText = `${item}: KSh ${price}`;
+    orderListDiv.appendChild(newItem);
+
+    // Update the total price
+    totalPrice += price;
+    document.getElementById("total-price").innerText = totalPrice;
 }
 
-// Function to simulate payment process
-function pay(method) {
-    if (total > 0) {
-        alert(`You have successfully paid $${total} using ${method}. Thank you for your order!`);
-        total = 0;
-        document.getElementById('total').innerText = total; // Reset total
+function payWithMpesa() {
+    if (totalPrice > 0) {
+        alert(`You have chosen to pay KSh ${totalPrice} using M-Pesa.`);
+        // Implement your M-Pesa payment integration here.
     } else {
-        alert('Please add items to your order before proceeding to payment.');
+        alert("Please add items to your order before making payment.");
+    }
+}
+
+function payWithPaypal() {
+    if (totalPrice > 0) {
+        alert(`You have chosen to pay KSh ${totalPrice} using PayPal.`);
+        // Implement your PayPal payment integration here.
+    } else {
+        alert("Please add items to your order before making payment.");
+    }
+}
+
+function payWithStripe() {
+    if (totalPrice > 0) {
+        alert(`You have chosen to pay KSh ${totalPrice} using Stripe.`);
+        // Implement your Stripe payment integration here.
+    } else {
+        alert("Please add items to your order before making payment.");
     }
 }
