@@ -1,44 +1,40 @@
-let totalPrice = 0;
-let orderList = [];
+let is24HourFormat = true;
 
-function addToOrder(item, price) {
-    // Add the item and price to the order list
-    orderList.push({ item, price });
+function updateClock() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // For 12-hour format, adjust the hours
+    if (!is24HourFormat) {
+        hours = hours % 12 || 12; // Adjust 0 hours to 12 for AM
+    }
+
+    // Format the time with leading zeros if needed
+    const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
     
-    // Update the display of the order list
-    let orderListDiv = document.getElementById("order-list");
-    let newItem = document.createElement("p");
-    newItem.innerText = `${item}: KSh ${price}`;
-    orderListDiv.appendChild(newItem);
-
-    // Update the total price
-    totalPrice += price;
-    document.getElementById("total-price").innerText = totalPrice;
+    // Display the formatted time
+    document.getElementById('clock').textContent = formattedTime;
 }
 
-function payWithMpesa() {
-    if (totalPrice > 0) {
-        alert(`You have chosen to pay KSh ${totalPrice} using M-Pesa.`);
-        // Implement your M-Pesa payment integration here.
-    } else {
-        alert("Please add items to your order before making payment.");
-    }
+// Add leading zeros to single-digit numbers
+function padZero(number) {
+    return number < 10 ? `0${number}` : number;
 }
 
-function payWithPaypal() {
-    if (totalPrice > 0) {
-        alert(`You have chosen to pay KSh ${totalPrice} using PayPal.`);
-        // Implement your PayPal payment integration here.
-    } else {
-        alert("Please add items to your order before making payment.");
-    }
+// Toggle between 24-hour and 12-hour format
+function toggleFormat() {
+    is24HourFormat = !is24HourFormat;
+    document.getElementById('toggle-format').textContent = is24HourFormat ? 
+        'Switch to 12-hour format' : 'Switch to 24-hour format';
 }
 
-function payWithStripe() {
-    if (totalPrice > 0) {
-        alert(`You have chosen to pay KSh ${totalPrice} using Stripe.`);
-        // Implement your Stripe payment integration here.
-    } else {
-        alert("Please add items to your order before making payment.");
-    }
-}
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Toggle button event listener
+document.getElementById('toggle-format').addEventListener('click', toggleFormat);
+
+// Initialize the clock immediately
+updateClock();
