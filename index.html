@@ -1,195 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">BR.F</div>
-    <nav>
-      <a href="#Women">Women</a>
-      <a href="#men">Men</a>
-      <a href="#Kids">Kids</a>
-      <a href="#Brands">Brands</a>
-      <a href="#">Sale</a>
-    </nav>
-    <div class="cart">
-      <a href="#cart">Cart</a>
-      <span>Favorites</span>
+    <div class="container">
+        <h1>Check your weather-info</h1>
+        <input type="text" id="city-input" placeholder="Enter capital city" />
+        <button onclick="getWeather()">Search</button>
+        <div id="weather-info">
+            <!-- Weather details will appear here -->
+        </div>
     </div>
-  </header>
-
-  <!-- Main Product Section -->
-  <main>
-    <div class="product-container">
-      <!-- Product Images -->
-      <div class="image-gallery">
-        <img src="images/redish2.png" alt="Shoe Image" class="main-image">
-        <div class="thumbnail-container">
-          <img src="images/shoe1.jpg" alt="Shoe Image">
-          <img src="images/shoe2.jpg" alt="Shoe Image">
-          <img src="images/shoe3.jpg" alt="Shoe Image">
-        </div>
-      </div>
-
-    <!-- Product Details -->
-      <div class="product-details">
-        <h1>Shoes Reebok Zig Kinetica 3</h1>
-        <div class="price">sh 4530</div>
-        <div class="size">
-          <label for="size">Size:</label>
-          <select id="size">
-            <option>40.5</option>
-            <option>41</option>
-            <option>42</option>
-            <option>43</option>
-            <option>44</option>
-          </select>
-        </div>
-        <button class="add-to-cart">Add to Cart</button>
-
-        <!-- Reviews Summary -->
-        <div class="rating">
-          <span class="stars">★★★★☆</span>
-          <span>4.8 (42 reviews)</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- section for men --> 
-    <section class="related-products" id="men">
-      <h2>Men</h2>
-      <div class="product-list">
-        <div class="product-item">
-          <img src="images/newbalance.jpg" alt="New Balance Shoes">
-          <p>New Balance B550</p>
-          <span>sh 3400</span>
-        </div>
-        <div class="product-item">
-          <img src="images/Asic.jpg" alt="Asic Shoes">
-          <p>Asic Gel-Lite</p>
-          <span>sh 2450</span>
-        </div>
-        <div class="product-item">
-          <img src="images/sooblue.jpg" alt="Reebok Shoes">
-          <p>Reebok Classic Leather</p>
-          <span>sh 1790</span>
-        </div>
-      </div>
-    </section>
-
-        <!-- section for women  -->
-         <section class="related-products" id="Women">
-          <h2>Women</h2>
-          <div class="product-list">
-            <div class="product-item">
-              <img src="images/newbalance.jpg" alt="New Balance Shoes">
-              <p>New Balance B550</p>
-              <span>sh 3400</span>
-            </div>
-            <div class="product-item">
-              <img src="images/Asic.jpg" alt="Asic Shoes">
-              <p>Asic Gel-Lite</p>
-              <span>sh 2450</span>
-            </div>
-            <div class="product-item">
-              <img src="images/sooblue.jpg" alt="Reebok Shoes">
-              <p>Reebok Classic Leather</p>
-              <span>sh 1790</span>
-            </div>
-          </div>
-        </section>
-
-              <!-- section for kids  -->
-                <section class="related-products" id="Kids">
-                  <h2>Kids</h2>
-                  <div class="product-list">
-                    <div class="product-item">
-                      <img src="images/kids1.jpg" alt="New Balance Shoes">
-                      <p>New Balance B550</p>
-                      <span>sh 3400</span>
-                    </div>
-                    <div class="product-item">
-                      <img src="images/kids2.jpg" alt="Asic Shoes">
-                      <p>Asic Gel-Lite</p>
-                      <span>sh 2450</span>
-                    </div>
-                    <div class="product-item">
-                      <img src="images/kids3.jpg" alt="Reebok Shoes">
-                      <p>Reebok Classic Leather</p>
-                      <span><button id="cart-items">add 1300</button></span>
-                    </div>
-                  </div>
-                </section>
-
-          <!-- add to cart section -->
-           <!-- Cart Section -->
-    <section class="shopping-cart">
-      <h2>Your Cart</h2>
-      <ul id="cart-items">
-        <!-- Cart items will be dynamically added here -->
-      </ul>
-      <div class="cart-total">
-        Total: $<span id="cart-total">0.00</span>
-      </div>
-    </section>
-
-                                <!-- section for Brands -->
-                                <section class="related-products" id="Brands">
-                                  <h2>Brands</h2>
-                                  <div class="product-list">
-                                    <div class="product-item">
-                                      <img src="images/addidas.jpg" alt="addidas brands here">
-                                      <p><a href="addidas.html"><button>Addidas shoes</button></a></p>
-                                      
-                                    </div>
-                                    <div class="product-item">
-                                      <img src="images/nike.jpg" alt="Nike Shoes">
-                                      <p><a href="nike.html"><button>Nikes Shoes</button></a></p>
-                                     
-                                    </div>
-                                    <div class="product-item">
-                                      <img src="images/rebook.png" alt="Reebok Shoes">
-                                      <p><a href="rebook.html"><button>Rebook Shoes</button></a></p>
-                                      
-                                    </div>
-                                  </div>
-                                </section>
-
-                   <!-- Reviews Section -->
-    <section class="reviews">
-      <h2>Reviews</h2>
-      <div class="review">
-        <strong>Helen M.</strong>
-        <p>Excellent running shoes! It turns very sharply on the foot.</p>
-        <span>5 stars</span>
-      </div>
-      <div class="review">
-        <strong>Ann D.</strong>
-        <p>Good shoes.</p>
-        <span>4 stars</span>
-      </div>
-      <div class="review">
-        <strong>Andrew G.</strong>
-        <p>Is it suitable for running?</p>
-        <span>3 stars</span>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-info">
-      <p>Company | About | Privacy | Terms</p>
-      <p>© 2024 BR.F</p>
-    </div>
-  </footer>
-
-  <script src="scripts.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
